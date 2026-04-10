@@ -27,6 +27,7 @@ Servidor de identidade e autorização
 - Docker
 
 ```bash
+cd ./keycloak
 docker compose up
 ```
 
