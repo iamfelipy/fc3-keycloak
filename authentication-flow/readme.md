@@ -1,25 +1,57 @@
-project node
+### Projeto Node.js - Authentication Flow
 
+#### Fluxo de Autenticação
+
+- Documentação detalhada: [Authorization Code Flow](authorization-code-flow/readme.md)
+
+
+#### Como Rodar o Projeto
+
+```bash
+docker compose up
+```
+
+
+#### Acessando o Container da Aplicação
+
+```bash
 docker compose exec fc3-keycloak-node-authentication-flow-app bash
+```
 
-// init npm
+
+#### Comandos Úteis
+
+```bash
+# setup.sh
+
+# Inicializar npm
 npm init -y
 
-// init typescript
+# Instalar e configurar Typescript
 npm i typescript@5.0.4 --save-dev
 npx tsc --init
 
-// watch server, auto reaload
+# Instalar Nodemon para auto-reload
 npm i -D nodemon@2.0.22
 
-// web server
+# Instalar express e tipagens
 npm i express@4.18.2
 npm i -D @types/express@4.17.17
 
+# Rodar server Typescript sem compilar manual
 npm i -D ts-node@10.9.1
 
-criar script start com ts-node para não precisar compilar typescript e nodemon para autoreload do server
+# Instalar tipagens e libs adicionais
+npm i -D @types/express-session@1.17.7
+npm i -D @types/jsonwebtoken@9.0.2
+npm i express-session@1.17.3
+npm i jsonwebtoken@9.0.0
+```
 
----------
-// "@types/express-session": "^1.17.7",
-// "@types/jsonwebtoken": "^9.0.2",
+---
+
+#### 🛠️ Recomendações
+
+- Instale a extensão do VS Code: **PlantUML**
+
+---
