@@ -1,8 +1,9 @@
 ### Projeto Node.js - Authentication Flow
 
-#### Fluxo de Autenticação
+#### Fluxos de Autenticação
 
-- Documentação detalhada: [Authorization Code Flow](authorization-code-flow/readme.md)
+- [Authorization Code Flow - backend](authorization-code-flow/readme.md)
+- [Implicit Flow - frontend](authorization-code-flow/readme.md)
 
 
 #### Como Rodar o Projeto
@@ -17,7 +18,6 @@ docker compose up
 ```bash
 docker compose exec fc3-keycloak-node-authentication-flow-app bash
 ```
-
 
 #### Comandos Úteis
 
