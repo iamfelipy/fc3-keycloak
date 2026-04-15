@@ -4,12 +4,16 @@
 
 - [Authorization Code Flow - backend](authorization-code-flow/readme.md)
 - [Implicit Flow - frontend](authorization-code-flow/readme.md)
+- [Hybrid Flow - frontend](hybrid-flow/README.md)
 
 
 #### Como Rodar o Projeto
 
 ```bash
 docker compose up
+npm i 
+
+# para o implicit/hybrid flow funcionar o client no keycloak precisa ter implicit flow ativado
 ```
 
 

@@ -1,42 +1,3 @@
-### 🚀 Script para start automático - Adicione ao package.json
-
-```json
-"scripts": {
-  "start": "nodemon --exec ts-node src/index.ts"
-}
-```
-
----
-
-## Testes e Fluxos
-
-### 🔑 Testando Authorization Code Flow - authorization-code-flow.sh
-
-```bash
-# authorization-code-flow.sh
-
-# Iniciar o fluxo Authorization Code
-npm run authorization-code
-
-# No Keycloak, configurar o client:
-# Root URL: http://localhost:3000
-# Valid Redirect URIs: /*
-# Web Origins: /*
-```
-
----
-
-### 🧪 Testando Replay Attacker - replay-attacker.sh
-
-```bash
-# replay-attacker.sh
-
-# Executar script para simular ataque de replay
-node_modules/.bin/ts-node authorization-code-flow/src/replay-attacker.ts
-```
-
----
-
 # Authorization Code Flow
 
 O fluxo Authorization Code Flow é geralmente recomendado para aplicativos web e aplicativos móveis confiáveis. Ele fornece um alto nível de segurança ao lidar com autorização e autenticação de usuários em um servidor de recursos.
@@ -66,3 +27,33 @@ O nonce é um parâmetro usado para evitar ataques de repetição (replay attack
 O ataque CSRF ocorre quando um invasor engana um usuário para que ele execute uma ação em um aplicativo web sem o conhecimento do usuário. Para evitar esse ataque, o aplicativo deve usar um parâmetro de estado (state parameter) para verificar se a resposta recebida do servidor de autorização corresponde à solicitação original.
 
 O state é um valor aleatório gerado pelo cliente antes de enviar a solicitação de autenticação e incluído na solicitação. O servidor de autenticação inclui o mesmo valor do state na resposta de autenticação, permitindo que o cliente verifique se a resposta é uma resposta legítima à solicitação original. Isso ajuda a evitar ataques de CSRF, em que um invasor engana um usuário para enviar uma solicitação maliciosa sem o conhecimento do usuário.
+
+
+---
+
+## Testes e Fluxos
+
+### 🔑 Testando Authorization Code Flow - authorization-code-flow.sh
+
+```bash
+# Execute o comando abaixo no diretório `./authentication-flow` para iniciar o projeto:
+npm run authorization-code
+
+# No Keycloak, configurar o client:
+# Root URL: http://localhost:3000
+# Valid Redirect URIs: /*
+# Web Origins: /*
+```
+
+---
+
+### 🧪 Testando Replay Attacker - replay-attacker.sh
+
+```bash
+# replay-attacker.sh
+
+# Executar script para simular ataque de replay
+node_modules/.bin/ts-node authorization-code-flow/src/replay-attacker.ts
+```
+
+---
