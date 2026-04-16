@@ -5,6 +5,7 @@
 - [Authorization Code Flow - backend](authorization-code-flow/readme.md)
 - [Implicit Flow - frontend](authorization-code-flow/readme.md)
 - [Hybrid Flow - frontend](hybrid-flow/README.md)
+- [Resource Owner Password Credentials - backend](resource-owner-password-credentials/readme.md)
 
 
 #### Como Rodar o Projeto
@@ -20,7 +21,7 @@ npm i
 #### Acessando o Container da Aplicação
 
 ```bash
-docker compose exec fc3-keycloak-node-authentication-flow-app bash
+docker compose exec -u root -it fc3-keycloak-node-authentication-flow-app bash
 ```
 
 #### Comandos Úteis
