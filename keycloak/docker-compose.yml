@@ -33,3 +33,8 @@ services:
       interval: 5s
       timeout: 10s
       retries: 5
+
+networks:
+  default:
+    external:
+      name: fc3-network

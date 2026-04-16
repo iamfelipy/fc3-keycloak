@@ -10,3 +10,8 @@ services:
       - .:/home/node/app
     extra_hosts:
       - "host.docker.internal:172.17.0.1"
+  
+networks:
+  default:
+    external:
+      name: fc3-network

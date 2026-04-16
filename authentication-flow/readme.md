@@ -15,6 +15,9 @@ docker compose up
 npm i 
 
 # para o implicit/hybrid flow funcionar o client no keycloak precisa ter implicit flow ativado
+
+# criar rede, pois host.docker.internal não funcionou com docker compose separados e vpn
+docker network create fc3-network
 ```
 
 

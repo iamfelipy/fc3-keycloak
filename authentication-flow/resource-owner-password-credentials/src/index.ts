@@ -42,7 +42,7 @@ app.post("/login", async (req, res) => {
     const { username, password } = req.body;
     console.log(username, password)
     const response = await fetch(
-      "http://host.docker.internal:8080/realms/fullcycle-realm/protocol/openid-connect/token",
+      "http://fc3-keycloak:8080/realms/fullcycle-realm/protocol/openid-connect/token",
       {
         method: "POST",
         headers: {
@@ -85,7 +85,7 @@ app.get("/logout", async (req, res) => {
 
   // const url = `http://localhost:8080/realms/fullcycle-realm/protocol/openid-connect/logout?${logoutParams.toString()}`;
   await fetch(
-    "http://host.docker.internal:8080/realms/fullcycle-realm/protocol/openid-connect/revoke",
+    "http://fc3-keycloak:8080/realms/fullcycle-realm/protocol/openid-connect/revoke",
     {
       method: "POST",
       headers: {

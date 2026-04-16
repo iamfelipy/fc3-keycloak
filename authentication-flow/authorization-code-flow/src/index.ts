@@ -102,7 +102,7 @@ app.get("/callback", async (req, res) => {
     redirect_uri: "http://localhost:3000/callback",
   });
 
-  const url = `http://host.docker.internal:8080/realms/fullcycle-realm/protocol/openid-connect/token`;
+  const url = `http://fc3-keycloak:8080/realms/fullcycle-realm/protocol/openid-connect/token`;
 
   const response = await fetch(url, {
     method: "POST",
