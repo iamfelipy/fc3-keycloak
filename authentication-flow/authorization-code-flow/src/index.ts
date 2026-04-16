@@ -56,6 +56,15 @@ app.get("/login", (req, res) => {
 });
 
 app.get("/logout", (req, res) => {
+  /*
+    Sim, há duas formas de logout no OpenID Connect:
+
+    Sem interação (Front/Back-channel logout): O app chama diretamente o endpoint de logout do provedor (como no seu código), passando id_token_hint e post_logout_redirect_uri. O usuário é deslogado sem precisar interagir novamente.
+
+    Com interação: O usuário pode ser redirecionado a uma interface da tela do provedor (ex: Keycloak) para confirmar o logout ou escolher de quais aplicações sair, exigindo uma ação manual do usuário.
+
+    Ambos são suportados, dependendo da implementação e configuração do provedor de identidade.
+  */
   const logoutParams = new URLSearchParams({
     //client_id: "fullcycle-client",
     //@ts-expect-error
